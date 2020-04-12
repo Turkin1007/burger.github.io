@@ -1,0 +1,259 @@
+.dark {
+  background: rgb(249,180,59);
+  background: linear-gradient(180deg, rgba(249,180,59,1) 0%, rgba(235,141,56,1) 50%, rgba(249,180,59,1) 100%);
+}
+
+.container__dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+.dark__containers {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+.arrow__left {
+  width: 5%;
+  position: relative;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  width: rem(30px);
+  transform: rotate(90deg);
+  transition: .3s;
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    &:hover {
+    .arrow-left__icon {
+      margin-top: rem(-15px);
+      width: rem(25px);
+      height: rem(25px);
+    }
+  }
+}
+
+.dark__left {
+  width: 50%;
+  display: flex;
+  position: relative;
+  @include tablets {
+    width: 80%;
+    min-height: 50%;
+    margin-top: 15%;
+  }
+
+  @include phones {
+    min-height: 50%;
+  }
+}
+
+.burgers {
+  position: absolute;
+  background: url("/images/img/burgers.png") no-repeat;
+  top: 20%;
+  left: 6%;
+  display: block;
+  width: rem(80px);
+  height: rem(80px);
+  z-index: 200;
+  @include tablets {
+    left: 10%;
+    top: 5%;
+  }
+  @include phones {
+    top: 2%;
+    left: 3%;
+  }
+}
+
+.kkal {
+  position: absolute;
+  top: 70%;
+  left: 8%;
+  @include tablets {
+    left: 80%;
+    top: 8%;
+  }
+  @include phones {
+    top: 4%;
+    left: 80%;
+  }
+}
+
+.slider {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-img {
+   width: 100%;
+   @include tablets {
+     width: 100%;
+   }
+  }
+
+.dark__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: rem(20px);
+  @include tablets {
+    width: 80%;
+    min-height: 50%;
+    margin: 0;
+  }
+  @include phones {
+    width: 90%;
+    margin: 0;
+    min-height: 50%;
+  }
+}
+
+.dark__text {
+  font-size: rem(14px);
+  font-family: 'Ubuntu';
+  color: #fff;
+  margin-top: rem(40px);
+
+  @include tablets {
+    font-size: rem(12px);
+    margin-top: rem(20px);
+  }
+}
+
+.pay {
+  display: flex;
+  align-items: center;
+}
+
+.money__pay {
+  font-size: rem(72px);
+  font-family: 'Gagalin-R';
+  color: #e35028;
+  margin-bottom: rem(30px);
+  margin-right: rem(10px);
+  
+  @include tablets {
+    font-size: rem(54px);
+    margin-bottom: rem(20px);
+  }
+
+  @include phones {
+    font-size: rem(44px);
+    margin-left: rem(-14px);
+    margin-bottom: rem(10px);
+  }
+
+}
+
+.money {
+  font-size: rem(30px);
+  font-family: 'Gagalin-R';
+  color: #e35028;
+  margin-right: rem(30px);
+  @include phones {
+    font-size: rem(24px);
+    margin-right: rem(20px);
+  }
+}
+
+.arrow__right {
+  width: 5%;
+  position: relative;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: rem(30px);
+  transform: rotate(-90deg) ;
+  transition: .3s;
+  height: rem(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    .arrow-right__icon {
+      margin-top: rem(-15px);
+      width: rem(25px);
+      height: rem(25px);
+    }
+  }
+}
+
+
+.structure {
+height: 40%;
+width: 28%;
+background-color: #fff;
+position: absolute;
+z-index: 100;
+opacity: 0.9;
+display: none;
+padding-top: rem(20px);
+border-radius: rem(8px);
+top: 20%;
+left: 14.5%;
+
+  @include laptop {
+    left: 15.5%;
+  }
+
+  @include tablets {
+    top: 5%;
+    left: 22.6%;
+    width: 42%;
+  }
+
+  @include phones {
+    width: 80%;
+    top: 12%;
+    left: 10%;
+  }
+}
+
+.structure__item {
+  display: flex;
+}
+
+.structure--icon {
+  margin-right: rem(20px);
+  margin-left: rem(20px);
+  margin-bottom: rem(15px);
+}
+
+.weight {
+  margin-left: auto;
+  margin-right: rem(20px);
+}
+
+.burgers:hover ~ .structure {
+  display: block;
+}

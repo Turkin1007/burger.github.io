@@ -1,0 +1,12 @@
+.best {
+  background: url("/images/img/bg-about.png") center center / cover no-repeat;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  .section__title {
+    margin-bottom: rem(80px);
+    @include tablets {
+      margin-bottom: rem(40px);
+    }
+  }
+}

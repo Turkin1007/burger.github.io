@@ -1,0 +1,17 @@
+.logo {
+	display: inline-block;
+	position: relative;
+	z-index: 110;
+
+	svg {
+		max-width: 95%;
+	}
+}
+
+
+
+.logo__icon {
+	path:nth-child(1) {
+		fill: #e45028;
+	}
+}

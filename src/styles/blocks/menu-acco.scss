@@ -1,0 +1,80 @@
+.menu {
+	position: relative;
+}
+
+.menu-acco {
+	position: absolute;
+	display: flex;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-acco__item {
+display: flex;
+cursor: pointer;
+}
+
+.menu-acco__trigger {
+	width: rem(80px);
+	display: block;
+	height: 100%;
+  position: relative;
+  
+  @include phones {
+    width: rem(50px);
+  }
+}
+
+.menu-acco__trigger-text {
+	font-size: rem(40px);
+	color: #fff;
+	@include gagalin;
+	text-align: center;
+	white-space: nowrap;
+  position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(-20px);
+
+  @include phones {
+    font-size: rem(26px);
+  }
+}
+
+.menu-acco__content {
+	background: rgba(#2f3234, .93);
+	width: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.menu-acco__item-active > .menu-acco__content {
+	background: rgba(#2f3234, .93);
+	display: block;
+	width: rem(400px);
+	opacity: 1;
+	transition: 0.5s;
+
+	@include phones {
+		width: rem(150px);
+	}
+}
+
+.menu-acco__text {
+	@include ubuntu(light);
+	font-size: rem(14px);
+	color: #fff;
+	padding: rem(60px) rem(30px);
+	width: 100%;
+  line-height: 1.8;
+
+  @include phones {
+    padding: rem(25px) rem(15px);
+  }
+}

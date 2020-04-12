@@ -1,0 +1,17 @@
+.menu {
+	background: url('/images/img/bg-menu.png') 50% no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.menu__title {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+
+	@include phones {
+		font-size: rem(48px);
+		left: 5%;
+		
+	}
+}

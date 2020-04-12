@@ -1,0 +1,250 @@
+.order {
+  background: url("/images/img/order-bg.png");
+}
+
+.container__order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__title--order {
+text-align: center;
+  @include laptop {
+    font-size: rem(60px);
+  }
+  @include phones {
+    font-size: rem(40px);
+  }
+}
+
+.order__container {
+  display: flex;
+  justify-content: center;
+  @include laptop {
+    font-size: rem(12px);
+  }
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    .order__left {
+      width: 60%;
+    }
+    .order__right {
+      width: 60%;
+    }
+  }
+
+  @include phones {
+    .order__left {
+      width: 90%;
+    }
+    .order__right {
+      width: 90%;
+      margin-bottom: rem(30px);
+      margin-left: 0;
+    }
+  }
+}
+
+//ORDER__LEFT
+.order__left {
+  width: 40%;
+  @include ubuntu($style: light);
+  color: #fff;
+}
+
+.order__row {
+  margin-bottom: rem(14px);
+  display: flex;
+}
+
+.order__block {
+  flex: 1;
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.order__title {
+  margin-bottom: rem(5px);
+}
+
+.order__input {
+  width: 100%;
+  padding: rem(8px) rem(21px);
+  border: none;
+  border-radius: rem(4px);
+}
+
+//ORDER__RIGHT
+
+.order__right {
+  width: 40%;
+  margin-left: rem(20px);
+  @include ubuntu($style: light);
+  color: #fff;
+}
+
+.comment__input {
+  width: 100%;
+  height: rem(110px);
+  border-radius: rem(4px);
+  margin-bottom: rem(10px);
+  padding: rem(10px);
+  resize: none;
+
+  @include phones {
+    height: rem(80px);
+  }
+}
+
+.order__pay {
+  margin-bottom: rem(16px);
+  position: relative;
+  @include phones {
+    text-align: center;
+  }
+}
+
+.order__item {
+  margin-right: rem(10px);
+}
+
+.order__buttons {
+  margin-left: 51%;
+}
+
+.reset {
+  border: 0;
+  background: transparent;
+  color: #fff;
+}
+
+.radio {
+  display: none;
+}
+
+.radio__text {
+  position: relative;
+  padding-left: rem(40px);
+
+  &:before {
+    display: inline-block;
+    content: "";
+    width: rem(14px);
+    height: rem(14px);
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: #fff;
+    position: absolute;
+    left: rem(10px);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 35%;
+      width: rem(7px);
+      height: rem(7px);
+      left: rem(18px);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $red;
+      opacity: 0;
+
+      @include laptop {
+        top: 50%;
+      }
+
+      @include tablets {
+        left: rem(17.7px);
+      }
+
+      @include phones {
+        top: 45%;
+        left: rem(18px);
+      }
+    }
+    @include phones {
+      padding-left: rem(30px);
+    }
+}
+
+.radio:checked + .radio__text::after {
+  opacity: 1;
+}
+
+.checkbox {
+display: none;
+  &:checked + .fake:before {
+    opacity: 1;
+  }
+}
+
+.fake {
+display: inline-block;
+width: rem(14px);
+height: rem(14px);
+border: 1px solid white;
+background-color: white;
+position: relative;
+  @include phones {
+    margin-left: 30%;
+  }
+}
+
+.fake:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  width: rem(6px);
+  height: rem(6px);
+  background-color: $red;
+  opacity: 0;
+  
+}
+
+.order__form-button {
+  @include inlineblock(middle);
+  margin-right: rem(20px);
+  border: 0;
+  background: $red;
+  font-size: rem(13px);
+  text-transform: uppercase;
+  border-radius: rem(5px);
+  color: #ffffff;
+  @include ubuntu(middle);
+  padding: rem(10px) rem(15px);
+  cursor: pointer;
+}
+
+.order__form-button_reset {
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: none;
+  background: transparent;
+}
+
+.error {
+  color: red;
+}
+
+.form__popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 30%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}

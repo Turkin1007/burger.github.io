@@ -1,0 +1,69 @@
+.full-review {
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(#2f3234, .99);
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	transition: opacity .3s;
+
+}
+
+.full-review__inner {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	height: 30%;
+	width: 60%;
+	background: #fff;
+	border-radius: rem(6px);
+	padding-top: rem(30px);
+	padding-left: rem(20px);
+	padding-right: rem(20px);
+}
+
+.full-review__close {
+	position: absolute;
+	width: rem(18px);
+	height: rem(18px);
+	box-sizing: content-box;
+	background: none;
+	border: none;
+	left: 90%;
+	top: rem(20px);
+
+	&:hover {
+		.full-review__close-icon {
+			use {
+				fill: red;
+			}
+		}
+	}
+}
+
+.full-review__close-icon {
+	width: 100%;
+	height: 100%;
+
+	use {
+		fill: red;
+		transition: fill .3s;
+	}
+}
+
+.full-review__title {
+	@include gagalin;
+	font-size: rem(14px);
+	text-transform: uppercase;
+	margin-bottom: rem(25px);
+}
+
+.full-review__content {
+	font-size: rem(14px);
+	@include ubuntu();
+}
+

@@ -1,0 +1,35 @@
+.popup {
+	display: none;
+	position: fixed;
+	top: 75%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: rem(100px);
+	height: rem(140px);
+	background-color: #fff;
+	border-radius: rem(10px);
+}
+
+.popup--show {
+	display: block;
+}
+
+.status-popup__inner {
+	padding: rem(20px);
+	text-align: center;
+}
+
+.status-popup__message {
+	margin-bottom: rem(20px);
+	font-size: rem(14px);
+}
+
+.status-popup {
+	width: rem(240px);
+}
+
+.error-message {
+	color: $red;
+}
+
+

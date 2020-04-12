@@ -1,0 +1,64 @@
+
+.bests__content {
+  text-align: center;
+  @include phones {
+    text-align: left;
+    width: 70%;
+  }
+}
+
+.bests__list {
+  display: flex;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.bests__img {
+@include phones {
+  margin-right: rem(10px);
+  width: 30%;
+  height: 100%;
+  }
+}
+
+.best__img-pic {
+  width: 90%;
+  height: rem(100px);
+  svg {
+    max-width: 95%;
+  }
+  @include phones {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+}
+
+.bests__item {
+  width: calc(100% / 3 - rem(26px));
+  margin: auto;
+  @include phones {
+    display: flex;
+    margin-bottom: rem(20px);
+  }
+}
+
+.bests__title {
+  @include lifehack();
+  font-size: rem(24px);
+  color: $black;
+  margin-bottom: rem(20px);
+  @include tablets {
+    font-size: rem(18px);
+  }
+  @include phones {
+    font-size: rem(20px);
+  }
+}
+
+.bests__text {
+  @include ubuntu($style: light);
+  font-size: rem(14px);
+  color: $black;
+}

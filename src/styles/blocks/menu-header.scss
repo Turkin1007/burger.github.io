@@ -1,0 +1,77 @@
+.menu__header {
+	@include inlineblock(middle);
+
+	@include laptop {
+		display: none;
+	}
+
+	&_hamburger {
+		width: auto;
+
+		.menu__item {
+			display: block;
+			text-align: center;
+			opacity: 0;
+			animation-fill-mode: forwards;
+
+			&:after {
+				display: block;
+				margin: rem(14px) auto;
+			}
+		}
+
+		@include tablets {
+			display: block;
+		}
+	}
+}
+
+.menu__list {
+	width: 100%;
+	@extend %clearfix;
+
+	@include laptop {
+		text-align: center;
+	}
+}
+
+.menu__item {
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: middle;
+
+	&:last-child {
+		margin-right: 0;
+		&:after {
+			display: none;
+		}
+	}
+
+	&:after {
+		content: "";
+		@include inlineblock(middle);
+		width: rem(4px);
+		height: rem(4px);
+		border-radius: 50%;
+		background: white;
+		margin: 0 rem(12px);
+	}
+
+}
+
+.menu__link {
+	@include inlineblock(middle);
+	font-size: rem(13px);
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	@include ubuntu(medium);
+
+	&:hover {
+		text-decoration: underline;
+	}
+	@include laptop {
+		display: flex;
+		flex-direction: column;
+	}
+}
